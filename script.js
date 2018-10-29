@@ -1,24 +1,15 @@
 $(document).ready(function() {
  
 
- 	$("#stream1_btn").on("click", function() {
- 		$(".stream1").removeClass('highlight_stream');
-		$(".stream2").removeClass('highlight_stream');
-		$(".stream3").removeClass('highlight_stream');
-	  	$(".stream1").addClass('highlight_stream');
+	$(".card_image").click(function () {
+		$(this).fadeTo("slow", 0.33);
 	});
-	$("#stream2_btn").on("click", function() {
-		$(".stream1").removeClass('highlight_stream');
-		$(".stream2").removeClass('highlight_stream');
-		$(".stream3").removeClass('highlight_stream');
-	  	$(".stream2").addClass('highlight_stream');
+	$(".bottom_button").mouseenter(function () {
+		$("p").toggle("slow");
 	});
-	$("#stream3_btn").on("click", function() {
-		$(".stream1").removeClass('highlight_stream');
-		$(".stream2").removeClass('highlight_stream');
-		$(".stream3").removeClass('highlight_stream');
-	  	$(".stream3").addClass('highlight_stream');
+	$("#image").click(function () {
+		$(this).slideUp("slow", function () {
+			// Animation complete.
+		});
 	});
-
-
 }); 
